@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.optifly.Optifly.OptiflyApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.984 s -- in com.optifly.Optifly.OptiflyApplicationTests
