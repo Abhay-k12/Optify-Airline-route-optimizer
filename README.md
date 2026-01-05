@@ -1,227 +1,236 @@
-<h1 align="center">✈️ OptiFly — Smart Air Route Optimization System</h1>
+<h1 align="center">✈️ OptiFly — Intelligent Air Route Optimization Platform</h1>
 
 <p align="center">
-  🚀 A Java Servlet-based web application to select the most optimal flight routes based on <b>cost</b> and <b>time</b>, with a dedicated admin portal for managing flight data.
+  <b>OptiFly</b> is a backend-intensive, graph-driven air route optimization system built using <b>Spring Boot</b> that computes the most efficient flight paths based on cost and travel time.
 </p>
 
+<p align="center">
+  Designed with clean architecture, algorithmic rigor, and real-world scalability in mind.
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Java%20Servlets-007396?style=for-the-badge&logo=apachetomcat&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Tomcat-FFA500?style=for-the-badge&logo=apachetomcat&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Maven-Build%20Tool-C71A36?style=for-the-badge"/>
 </p>
-<br>
 
 ---
 
-## 📖 Problem Statement
-In many cases, travelers face difficulty in choosing optimal flight routes based on factors like time, cost, and connectivity. Existing systems often lack transparent, efficient route optimization, especially when considering multiple connecting flights within a network of airports.
+## 📌 Why OptiFly?
 
-<br>
+Modern flight booking systems often act as **black boxes** — users see the result, but not the logic.
+OptiFly was built to **explicitly model flight networks as graphs** and apply **deterministic optimization algorithms**, making routing decisions transparent, testable, and extensible.
 
----
+This project demonstrates:
 
-## 💡 Our Solution
-OptiFly is a Java Servlet-based web application built to:
-
-- 📊 Allow users to view optimized flight paths based on cost and time
-- ✈️ Build backend flight network graph dynamically from database
-- ⚙️ Use Dijkstra's algorithm for optimal route finding
-- 🛠️ Provide admin tools to add, delete, update, and view flights
-- 🖥️ Deliver a clean, responsive frontend for travelers and administrators
-<br>
+* Strong **DSA foundations**
+* Clean **layered backend architecture**
+* Practical **Spring Boot REST design**
+* Real-world **optimization problem solving**
 
 ---
 
-## 🚀 Features
+## 🧠 Core Concept
 
-✅  Find most efficient flight routes based on **time** and **cost**  
-✅  Admin dashboard to **add, delete, update and view flights**  
-✅  User-friendly, clean **HTML/CSS/JavaScript frontend**  
-✅  Dijkstra's algorithm implementation in backend Java code  
-✅  Deployed locally via **Apache Tomcat Server**
+The entire air travel network is modeled as a **weighted directed graph**:
 
-<br>
+* **Nodes** → Airports
+* **Edges** → Flights
+* **Weights** → Cost / Time
 
----
-## 🛠️ Tech Stack
-
-
-<div align="center">
-
-<table>
-<thead>
-<tr>
-<th>🖥️ Technology</th>
-<th>⚙️ Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/></td>
-<td>Core backend language</td>
-</tr>
-<tr>
-<td><img src="https://img.shields.io/badge/Java%20Servlets-007396?style=for-the-badge&logo=apachetomcat&logoColor=white"/></td>
-<td>Backend application using Servlets</td>
-</tr>
-<tr>
-<td><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/></td>
-<td>Structure of web pages</td>
-</tr>
-<tr>
-<td><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/></td>
-<td>Styling web pages</td>
-</tr>
-<tr>
-<td><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/></td>
-<td>Client-side interactions</td>
-</tr>
-<tr>
-<td><img src="https://img.shields.io/badge/Tomcat-FFA500?style=for-the-badge&logo=apachetomcat&logoColor=white"/></td>
-<td>Web server to deploy Java apps</td>
-</tr>
-<tr>
-<td><img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white"/></td>
-<td>Data exchange format</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-
-
-<br>
+The system dynamically builds this graph and applies **Dijkstra’s Algorithm** to compute the optimal path based on user-defined priority.
 
 ---
-## 📁 Project Directory Structure
+
+## ⚙️ What the System Does
+
+- Dynamically constructs a flight network graph
+- Computes shortest paths using Dijkstra’s algorithm
+- Supports optimization by **cost**, **time**, or extensible hybrid metrics
+- Exposes logic via clean REST APIs
+- Separates concerns using controller–service–repository layers
+
+---
+
+
+## 📁 Complete Project Structure
 
 ```
 OptiFly/
-├── 📂 WEB_INF/                        # 📦 Web application configs and compiled classes
-│   ├── 📂 classes/                    # 📚 Compiled Java .class files directory
-│   │   ├── 📂 administrator/          # 🛠️ Admin Servlets and backend classes
-│   │   ├── 📂 clientBackend/          # 🧳 Client-side backend logic and helpers
-│   │   ├── 📂 main/                   # 🖥️ Terminal-based outputs and test utilities
-│   │   └── 📂 servlets/               # 🌐 Java Servlet classes handling HTTP requests
-│   ├── 📂 lib/                        # 📦 External libraries / JAR dependencies
-│   │   └── 📄 json-20240303.jar       # 📝 JSON library for parsing request-response data
-│   └── 📄 web.xml                     # 🗺️ Servlet deployment descriptor (URL mappings)
-├── 📂 admin/                          # 👨‍✈️ Admin-side HTML frontend pages
-├── 📂 client/                         # 👩‍💼 Client-side HTML frontend pages
-├── 📂 css/                            # 🎨 CSS files for styling the application
-├── 📂 database/                       # 🚀 Database file for dynamic graph generation
-├── 📂 js/                             # ✨ JavaScript files for client-side interactivity
-├── 📂 images/                         # 🖼️ Image assets for the frontend UI
-├── 📄 index.html                      # 🏠 Home page of the application
-├── 📄 about.html                      # ℹ️ About Us page explaining the system and team
+├── 📂 .mvn/                              # ⚙️ Maven wrapper files for consistent builds
+│
+├── 📂 src/
+│   └── 📂 main/
+│       ├── 📂 java/
+│       │   └── 📂 com/
+│       │       └── 📂 optifly/
+│       │
+│       │           ├── 📂 backend/                   # Core optimization & algorithm engine
+│       │           │   ├── 📄 AirPortsCodes.java     # Airport code ↔ name mapping
+│       │           │   ├── 📄 ConstructGraph.java    # Builds flight network graph
+│       │           │   ├── 📄 OptimisePath.java      # Dijkstra’s algorithm logic
+│       │           │   └── 📄 ReturnObject.java      # Optimized route response DTO
+│       │
+│       │           ├── 📂 controller/                # REST API controllers
+│       │           │   ├── 📄 FlightController.java
+│       │           │   ├── 📄 RouteOptimizationController.java
+│       │           │   └── 📄 HealthCheck.java       # Service health endpoint
+│       │
+│       │           ├── 📂 entity/                    # Domain models / entities
+│       │           │   └── 📄 Flight.java
+│       │
+│       │           ├── 📂 repository/                 # Data access layer
+│       │           │   └── 📄 FlightRepository.java
+│       │
+│       │           ├── 📂 service/                    # Business logic layer
+│       │           │   ├── 📄 FlightService.java
+│       │           │   └── 📄 RouteOptimizationService.java
+│       │
+│       │           └── 📄 OptiFlyApplication.java     # Spring Boot entry point
+│       │
+│       └── 📂 resources/
+│           ├── 📂 static/                 # Static resources (CSS, JS, images if needed)
+│           ├── 📂 templates/              # Server-side templates (optional)
+│           └── 📄 application.properties  # Application configuration
+│
+├── 📄 pom.xml                             # Maven dependencies & build config
+├── 📄 .gitignore                          # Ignored files & folders
+└── 📄 README.md                           # Project documentation
 
 ```
+
+
 <br>
+
+---
+
 
 ## 📸 Preview Images
 
 | 📍 Page / Feature            | 📸 Screenshot                                              |
 |:----------------------------|:-----------------------------------------------------------|
-| About Page                   | ![About](Optifly/webapps/Optifly/preViewImages/aboutPre.png)                   |
-| Flight Menu Page             | ![Flight Menu](Optifly/webapps/Optifly/preViewImages/menuPre.png)        |
-| Add Flight Page              | ![Add Flight](Optifly/webapps/Optifly/preViewImages/addPre.png)          |
-| Delete Flight Page           | ![Delete Flight](Optifly/webapps/Optifly/preViewImages/deletePre.png)    |
-| Update Flight Page           | ![Delete Flight](Optifly/webapps/Optifly/preViewImages/updatePre.png)    |
-| View Flights                 | ![View Flights ](Optifly/webapps/Optifly/preViewImages/ViewPre2.png)  |
-| Path Optimization Result (1) | ![Optimise Path 1](Optifly/webapps/Optifly/preViewImages/pathPre.png)  |
-| Path Optimization Result (2) | ![Optimise Path 2](Optifly/webapps/Optifly/preViewImages/pathPre2.png)  |
+| About Page                   | ![About](preViewImages/aboutPre.png)                   |
+| Flight Menu Page             | ![Flight Menu](preViewImages/menuPre.png)        |
+| Add Flight Page              | ![Add Flight](preViewImages/addPre.png)          |
+| Delete Flight Page           | ![Delete Flight](preViewImages/deletePre.png)    |
+| Update Flight Page           | ![Delete Flight](preViewImages/updatePre.png)    |
+| View Flights                 | ![View Flights ](preViewImages/ViewPre2.png)  |
+| Path Optimization Result (1) | ![Optimise Path 1](preViewImages/pathPre.png)  |
+| Path Optimization Result (2) | ![Optimise Path 2](preViewImages/pathPre2.png)  |
 
 
 <br>
 
 ---
 
-## 📦 How to Run
+## 🔍 Deep Dive: Optimization Engine
 
-### 📌 Prerequisites
-- ✅ JDK installed
-- ✅ Apache Tomcat (v9+ recommended)
-- ✅ `json-20240303.jar` placed inside `WEB_INF/lib/`
+### 🔹 Graph Construction
 
-<br>
+`ConstructGraph.java` converts flight data into an adjacency list representation:
+
+* Ensures fast traversal
+* Minimizes memory overhead
+* Supports multiple outgoing edges per airport
+
+### 🔹 Path Optimization
+
+`OptimisePath.java` implements **Dijkstra’s Algorithm** using:
+
+* Priority Queue (Min-Heap)
+* Distance relaxation
+* Path reconstruction
+
+This ensures:
+
+* **O(E log V)** time complexity
+* Deterministic shortest path results
+* Scalability to large networks
 
 ---
 
-### 📌 Compile Java Servlets
+## 🌐 API Design
+
+### 🔸 Optimize Flight Route
+
+```http
+POST /optimize-route
+```
+
+**Request Payload**
+
+```json
+{
+  "source": "DEL",
+  "destination": "BLR",
+  "priority": "TIME"
+}
+```
+
+**Response**
+
+```json
+{
+  "route": ["DEL", "BOM", "BLR"],
+  "totalCost": 5100,
+  "totalTime": 5.1
+}
+```
+
+---
+
+## ▶️ Running the Project
+
+### ✅ Prerequisites
+
+* Java 17+
+* Maven
+* IntelliJ IDEA (recommended)
+
+### 🚀 Run Locally
 
 ```bash
-cd webapps/Optifly/WEB_INF/classes/javac -cp "C:\path\to\tomcat\lib\servlet-api.jar;WEB_INF/lib/json-20240303.jar" administrator/*.java clientBackend/*.java main/*.java servlets/*.java
+mvn spring-boot:run
 ```
-<br>
 
-### 🚀 How to Deploy on Tomcat
+Or simply run:
 
-1. Copy the entire `Optifly` folder into the `webapps/` directory of your Tomcat installation.
-
-2. Start the Tomcat server:
-
-   ```bash
-   catalina.bat run
-   ```
-
-3. Open your browser and visit:
-
-   ```
-   http://localhost:8080/Optifly/
-   ```
-<br>
-
----
-
-## 📖 Core Components
-
-* **ConstructGraph.java** — Builds the flight graph from flight data
-* **OptimisePath.java** — Dijkstra's algorithm implementation
-* **AirPortsCodes.java** — Maps airport codes to their names
-* **AddFlightServlet.java** — Adds new flight entry
-* **DeleteFlightServlet.java** — Deletes existing flight entry
-* **UpdateFlightServlet.java** — Updates flight details
-* **OptimisePathServlet.java** — Computes optimized flight route
-
-<br>
-
----
-
-## 📃 web.xml Servlet Mapping Example
-
-```xml
-<servlet>
-  <servlet-name>AddFlight</servlet-name>
-  <servlet-class>servlets.AddFlightServlet</servlet-class>
-</servlet>
-
-<servlet-mapping>
-  <servlet-name>AddFlight</servlet-name>
-  <url-pattern>/AddFlightServlet</url-pattern>
-</servlet-mapping>
 ```
-<br>
+OptiFlyApplication.java ▶️
+```
+
+The application starts on:
+
+```
+http://localhost:8080
+```
 
 ---
 
-## 🌱 Future Scope
-- 📱 Develop a mobile app version for cross-platform use
+## 🧪 Testing & Extensibility
 
-- 🌍 Integrate real-time flight APIs for live schedule updates
+* Designed for unit testing at service and algorithm levels
+* Easy to plug in:
 
-- 📊 Include data visualization for route and price analytics
+  * Real databases
+  * External flight APIs
+  * Multi-criteria optimization strategies
 
-- 📤 Enable flight booking and seat selection features
+---
 
-- 🔐 Add authentication and user session management
+## 🚀 Future Roadmap
 
-  <br>
+* 🔐 JWT authentication & role-based access
+* 📊 Multi-objective optimization (Pareto optimal paths)
+* 🌍 Real-time flight data integration
+* 🧠 Heuristic / A* based routing
+* 📱 Frontend or mobile client
 
-  ---
+---
+
 ## 📞 Help & Contact  
 
 > 💬 *Got a question, suggestion, or need help with Optifly?*  
@@ -243,3 +252,5 @@ cd webapps/Optifly/WEB_INF/classes/javac -cp "C:\path\to\tomcat\lib\servlet-api.
 
 
 <br>
+
+---
