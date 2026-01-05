@@ -15,7 +15,8 @@ public class AirPortsCodes {
             "Mangaluru", "Mumbai", "Mysuru", "Nagpur", "Nashik", "North Goa", "Pantnagar", "Patna", "Port Blair", "Prayagraj",
             "Puducherry", "Pune", "Raipur", "Rajahmundry", "Rajkot", "Ranchi", "Salem", "Shillong", "Shirdi", "Shivamogga",
             "Silchar", "Srinagar", "Surat", "Thiruvananthapuram", "Tiruchirappalli", "Tirupati", "Tuticorin", "Udaipur",
-            "Vadodara", "Varanasi", "Vijayawada", "Visakhapatnam" };
+            "Vadodara", "Varanasi", "Vijayawada", "Visakhapatnam"
+    };
 
 
     public String[] states = {"Tripura", "Ladakh", "Uttar Pradesh", "Gujarat", "Mizoram", "Punjab", "Maharashtra", "Uttar Pradesh",
@@ -28,7 +29,8 @@ public class AirPortsCodes {
             "Tamil Nadu", "Karnataka", "Maharashtra", "Karnataka", "Maharashtra", "Maharashtra", "Goa", "Uttarakhand",
             "Bihar", "Andaman and Nicobar Islands", "Uttar Pradesh", "Puducherry", "Maharashtra", "Chhattisgarh", "Andhra Pradesh",
             "Gujarat", "Jharkhand", "Tamil Nadu", "Meghalaya", "Maharashtra", "Karnataka", "Assam", "Jammu and Kashmir",
-            "Gujarat", "Kerala", "Tamil Nadu", "Andhra Pradesh", "Tamil Nadu", "Rajasthan", "Gujarat", "Uttar Pradesh", "Andhra Pradesh", "Andhra Pradesh"};
+            "Gujarat", "Kerala", "Tamil Nadu", "Andhra Pradesh", "Tamil Nadu", "Rajasthan", "Gujarat", "Uttar Pradesh", "Andhra Pradesh", "Andhra Pradesh"
+    };
 
 
     public HashMap <String,Integer> portToCode = new HashMap<>();
