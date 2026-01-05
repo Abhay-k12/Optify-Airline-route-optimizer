@@ -126,14 +126,14 @@ OptiFly/
 
 | 📍 Page / Feature            | 📸 Screenshot                                              |
 |:----------------------------|:-----------------------------------------------------------|
-| About Page                   | ![About](webapps/Optifly/preViewImages/aboutPre.png)                   |
-| Flight Menu Page             | ![Flight Menu](webapps/Optifly/preViewImages/menuPre.png)        |
-| Add Flight Page              | ![Add Flight](webapps/Optifly/preViewImages/addPre.png)          |
-| Delete Flight Page           | ![Delete Flight](webapps/Optifly/preViewImages/deletePre.png)    |
-| Update Flight Page           | ![Delete Flight](webapps/Optifly/preViewImages/updatePre.png)    |
-| View Flights                 | ![View Flights ](webapps/Optifly/preViewImages/ViewPre2.png)  |
-| Path Optimization Result (1) | ![Optimise Path 1](webapps/Optifly/preViewImages/pathPre.png)  |
-| Path Optimization Result (2) | ![Optimise Path 2](webapps/Optifly/preViewImages/pathPre2.png)  |
+| About Page                   | ![About](Optifly/webapps/Optifly/preViewImages/aboutPre.png)                   |
+| Flight Menu Page             | ![Flight Menu](Optifly/webapps/Optifly/preViewImages/menuPre.png)        |
+| Add Flight Page              | ![Add Flight](Optifly/webapps/Optifly/preViewImages/addPre.png)          |
+| Delete Flight Page           | ![Delete Flight](Optifly/webapps/Optifly/preViewImages/deletePre.png)    |
+| Update Flight Page           | ![Delete Flight](Optifly/webapps/Optifly/preViewImages/updatePre.png)    |
+| View Flights                 | ![View Flights ](Optifly/webapps/Optifly/preViewImages/ViewPre2.png)  |
+| Path Optimization Result (1) | ![Optimise Path 1](Optifly/webapps/Optifly/preViewImages/pathPre.png)  |
+| Path Optimization Result (2) | ![Optimise Path 2](Optifly/webapps/Optifly/preViewImages/pathPre2.png)  |
 
 
 <br>
